@@ -32,7 +32,7 @@ BEGIN
 
 	IF EXISTS(SELECT * FROM Film WHERE Tytul = @Tytul )
 	BEGIN
-	  RAISERROR('Jest ju¿ taki film!', 11, 1);
+	  RAISERROR('Jest juï¿½ taki film!', 11, 1);
 	  RETURN -1;
 	END
 
@@ -47,7 +47,6 @@ BEGIN
 	BEGIN CATCH
 
 		ROLLBACK;
-		THROW;
 
 	END CATCH
 
